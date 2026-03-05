@@ -1,6 +1,6 @@
 site_name: ChI-SOM Docs
-repo_url: https://github.com/kochgroup/SOMba
-repo_name: kochgroup/SOMba
+repo_url: https://github.com/kochgroup/ChI-SOM
+repo_name: kochgroup/ChI-SOM
 site_author: Johannes Kaminski, Oliver Koch
 
 theme:
