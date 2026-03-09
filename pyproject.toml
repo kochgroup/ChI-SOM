@@ -42,7 +42,7 @@ classifiers = [
 license = "LGPL-3.0-or-later"
 license-files = ["LICENSES/*"]
 
-version = "1.0"
+version = "1.0.1"
 
 dependencies = [
     "numba>=0.61.2",
