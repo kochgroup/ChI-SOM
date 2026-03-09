@@ -486,6 +486,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="HDF5Creator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chisom.io.HDF5Creator.create" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        create
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -735,6 +752,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="HDF5Creator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chisom.io.HDF5Creator.create" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        create
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1871,6 +1905,79 @@ Should not need configuration.</p>
 
 
 
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="chisom.io.HDF5Creator.create" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">create</span>
+
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">create</span><span class="p">(</span>
+    <span class="n">file_hierarchy</span><span class="p">:</span> <span class="n">FileList</span><span class="p">,</span>
+    <span class="n">out_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">leaf_map</span><span class="p">:</span> <span class="n">LeafMap</span><span class="p">,</span>
+    <span class="n">sep</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">skip_lines</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Run creation of HDF5 storage file</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>file_hierarchy</code></b>
+              (<code><span title="chisom.io._types.FileList">FileList</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Dictionary of files to parse, see How-To Guides.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>out_path</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Output path for the HDF5 files.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>leaf_map</code></b>
+              (<code><span title="chisom.io._types.LeafMap">LeafMap</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Dictionary of file structure and datatypes, see How-To Guides.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>sep</code></b>
+              (<code><span title="str">str</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Column seperator.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>skip_lines</code></b>
+              (<code><span title="int">int</span></code>, default:
+                  <code>0</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Number of lines to skip at the beginning of file, e.g. for headers.</p>
+          </div>
+        </li>
+    </ul>
+
+
+    </div>
+
+</div>
 
 
 
