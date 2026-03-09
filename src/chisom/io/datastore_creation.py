@@ -130,12 +130,16 @@ def _parse_file_hierarchy(
 
     parsed_hierarchy = {}
     for k in file_hierarchy:
-        current_path = file_hierarchy[k]
+        current_pathlist = file_hierarchy[k]
+
+        if not isinstance(current_pathlist, list):
+            raise TypeError(f"Input node {current_pathlist} is not of type 'list'")
+
         parsed_path = []
 
-        for entry in current_path:
+        for entry in current_pathlist:
             try:
-                p = pl.Path(entry)
+                p = pl.Path(entry).absolute()
             except Exception:
                 continue
 
@@ -150,7 +154,9 @@ def _parse_file_hierarchy(
                 parsed_path.append(str(p.absolute()))
 
         if len(parsed_path) == 0:
-            raise FileNotFoundError(f"For class '{k} no file was found!")
+            raise FileNotFoundError(
+                f"File with absolute path {p} for class '{k} was not found!"
+            )
 
         parsed_hierarchy[k] = parsed_path
 
@@ -168,23 +174,23 @@ def _parse_output_path(out_path: str, file_extentions: list[str]) -> str:
 
     elif p.is_file():
         answer_challenge = input(
-            "File already exists. Do you want to overwrite? (y/n):\n"
+            f"File at {p} already exists. Do you want to overwrite? (y/n):\n"
         )
 
         if answer_challenge.lower() != "y":
-            raise FileExistsError("File already exists")
+            raise FileExistsError(f"File at {p} already exists")
         else:
             out_file = p.absolute()
     else:
         if not p.parent.is_dir():
-            raise FileNotFoundError("Path does not exist!")
+            raise FileNotFoundError(f"Path {p} does not exist!")
 
         if not p.suffix:
             out_file = p.absolute() / ".zarr"
         elif p.suffix in file_extentions:
             out_file = p.absolute()
         else:
-            raise ValueError("Wrong file extention!")
+            raise ValueError(f"Wrong file extention for file with path {p}!")
 
     return str(out_file)
 
@@ -328,21 +334,31 @@ class StoreCreator(ABC):
                         continue
                     else:
                         for leaf_name, leaf_properties in leaf_map.items():
-                            # If string type, append to list
-                            if leaf_properties[1] is str:
-                                out_batch[leaf_name].append(element[leaf_properties[0]])
-                            # If other type, append to array
-                            else:
-                                item = np.array(
-                                    leaf_properties[1](element[leaf_properties[0]]),
-                                    dtype=leaf_properties[1],
+                            dtype = leaf_properties[1]
+                            property_position = leaf_properties[0]
+                            value = element[property_position]
+                            try:
+                                # If string type, append to list
+                                if dtype is str:
+                                    out_batch[leaf_name].append(value)
+                                # If other type, append to array
+                                else:
+                                    item = np.array(
+                                        dtype(value),
+                                        dtype=dtype,
+                                    )
+                                    out_batch[leaf_name] = np.concat(
+                                        [
+                                            out_batch[leaf_name],
+                                            item[np.newaxis],
+                                        ]
+                                    )
+                            except Exception:
+                                print(
+                                    f"Parsing of leaf {leaf_name}, with type {dtype} failed with value: {value}"
                                 )
-                                out_batch[leaf_name] = np.concat(
-                                    [
-                                        out_batch[leaf_name],
-                                        item[np.newaxis],
-                                    ]
-                                )
+                                continue
+
                 for leaf_name, values in out_batch.items():
                     local_range_dict_item = local_range_dict[leaf_name]
                     if local_range_dict_item["type"] == "continous":
@@ -598,9 +614,25 @@ class HDF5Creator(StoreCreator):
         file_hierarchy: FileList,
         out_path: str,
         leaf_map: LeafMap,
+        sep: str,
         skip_lines: int = 0,
-        sep: str = "\t",
     ) -> None:
+        """
+        Run creation of HDF5 storage file
+
+        Parameters
+        ----------
+        file_hierarchy :
+            Dictionary of files to parse, see How-To Guides.
+        out_path :
+            Output path for the HDF5 files.
+        leaf_map :
+            Dictionary of file structure and datatypes, see How-To Guides.
+        sep :
+            Column seperator.
+        skip_lines :
+            Number of lines to skip at the beginning of file, e.g. for headers.
+        """
         file_hierarchy = _parse_file_hierarchy(file_hierarchy, self.file_extensions)
         out_path = _parse_output_path(out_path, [".h5", ".hdf5"])
         ranges_dict_prototype = self._create_ranges_dict(leaf_map.copy())
