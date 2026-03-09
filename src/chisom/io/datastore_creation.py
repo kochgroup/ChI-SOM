@@ -334,21 +334,31 @@ class StoreCreator(ABC):
                         continue
                     else:
                         for leaf_name, leaf_properties in leaf_map.items():
-                            # If string type, append to list
-                            if leaf_properties[1] is str:
-                                out_batch[leaf_name].append(element[leaf_properties[0]])
-                            # If other type, append to array
-                            else:
-                                item = np.array(
-                                    leaf_properties[1](element[leaf_properties[0]]),
-                                    dtype=leaf_properties[1],
+                            dtype = leaf_properties[1]
+                            property_position = leaf_properties[0]
+                            value = element[property_position]
+                            try:
+                                # If string type, append to list
+                                if dtype is str:
+                                    out_batch[leaf_name].append(value)
+                                # If other type, append to array
+                                else:
+                                    item = np.array(
+                                        dtype(value),
+                                        dtype=dtype,
+                                    )
+                                    out_batch[leaf_name] = np.concat(
+                                        [
+                                            out_batch[leaf_name],
+                                            item[np.newaxis],
+                                        ]
+                                    )
+                            except Exception:
+                                print(
+                                    f"Parsing of leaf {leaf_name}, with type {dtype} failed with value: {value}"
                                 )
-                                out_batch[leaf_name] = np.concat(
-                                    [
-                                        out_batch[leaf_name],
-                                        item[np.newaxis],
-                                    ]
-                                )
+                                continue
+
                 for leaf_name, values in out_batch.items():
                     local_range_dict_item = local_range_dict[leaf_name]
                     if local_range_dict_item["type"] == "continous":
