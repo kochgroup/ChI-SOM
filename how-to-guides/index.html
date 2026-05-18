@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
       
       
 
@@ -481,10 +481,10 @@ generator = rdFingerprintGenerator.GetMorganGenerator
 <p>The paths and files considered for the HDF5 file creation must be supplied as a dictionary. Keys are distinct groups that can later be accessed individually when using the <em>Dataset</em>. Each item contains a list of files and paths that should be included in the respective group. Paths are walked recursively, and all files are included that match the file extensions later supplied to the <em>HDF5Creator</em>.  </p>
 <pre><code class="language-python">file_dict = {
     &quot;active&quot;: [
-        &quot;tests/testdata/VDR/actives.smi&quot;,
+        &quot;tests/VDR/actives.smi&quot;,
     ],
     &quot;inactive&quot;: [
-        &quot;tests/testdata/VDR/inactives.smi&quot;,
+        &quot;tests/VDR/inactives.smi&quot;,
     ],
 }
 </code></pre>
@@ -510,7 +510,7 @@ file_creator = HDF5Creator(fingerprint_generator_factory=molgen)
 <p>To finally create the file, we call the <em>HDF5Creator.create()</em> method, with the desired output filepath. We can further skip lines, e.g. in case of a header, and change the separation character.</p>
 <pre><code class="language-python">file_creator.create(
     file_dict,
-    &quot;tests/testdata/VDR.h5&quot;,
+    &quot;tests/VDR.h5&quot;,
     leaf_map,
     skip_lines=1,
     sep=&quot;\t&quot;,
@@ -522,7 +522,7 @@ file_creator = HDF5Creator(fingerprint_generator_factory=molgen)
 There are, however, some considerations necessary for using the <a href="https://docs.pytorch.org/docs/stable/data.html">PyTorch DataLoader</a>.</p>
 <p>First we load the HDF5 file using the <em>HDF5Dataset</em> class  </p>
 <pre><code class="language-python"># Create a ChemDataset object that from a HDF5 file, that is compatible with the pytorch DataLoader
-ds = HDF5Dataset(&quot;tests/testdata/VDR.h5&quot;, [&quot;active&quot;])
+ds = HDF5Dataset(&quot;tests/VDR.h5&quot;, [&quot;active&quot;])
 </code></pre>
 <p>We create the <em>DataLoader</em> with the dataset instance as the input.</p>
 <pre><code class="language-python"># Create a DataLoader object that will be used to train the SOM
@@ -612,10 +612,10 @@ bmus, qe = som.predict(dl)
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>
