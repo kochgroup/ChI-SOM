@@ -332,6 +332,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#using-less-cores-than-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using less cores than available
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -442,6 +453,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#using-less-cores-than-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using less cores than available
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -463,9 +485,9 @@
 
 
 <h1 id="how-to-guides">How-To Guides</h1>
+<p>As large datasets of enumerated fingerprints and other information for cheminformatics might not fit into working memory, &#7521;-SOM supplies a dedicated HDF5 file layout and <em>HDF5Dataset</em> class. This <em>HDF5Dataset</em> class is compatible with the <a href="https://docs.pytorch.org/docs/stable/data.html">PyTorch DataLoader</a> for random, millisecond latency, access into this on-disk storage.</p>
 <h2 id="creating-a-hdf5dataset-file">Creating a HDF5Dataset file</h2>
-<p>As a dataset of enumerated fingerprints and other information for cheminformatic might not fit into working memory, ChI-SOM supplies a dedicated HDF5 file layout and <em>HDF5Dataset</em> class. This <em>HDF5Dataset</em> class is compatible with the <a href="https://docs.pytorch.org/docs/stable/data.html">PyTorch DataLoader</a> for random, millisecond latency, access into this on-disk storage.
-ChI-SOM supplies a tool to generate the HDF5 files containing the fingerprints directly from text files of molecular data in different line notations, e.g. SMILES, INCHI, etc., or text files already containing enumerated fingerprint data. Other properties of the molecules can also be recorded for examination with the GUI.  </p>
+<p>&#7521;-SOM supplies a tool to generate the HDF5 files containing the fingerprints directly from text files of molecular data in different line notations, e.g. SMILES, INCHI, etc., or text files already containing enumerated fingerprint data. Other properties of the molecules can also be recorded for examination with the GUI.  </p>
 <p>We import <em>HDF5Creator</em> and either <em>rdStyleFactory</em> or <em>CSVStyleFactory</em>. Both need an <em>rdMolGenerator</em> to build the internal representation from line notation. <em>rdFingerprintGenerator</em> is specific to the direct generation of enumerated fingerprints.  </p>
 <pre><code class="language-python">from numpy import float32
 from rdkit.Chem import MolFromSmiles, rdFingerprintGenerator
@@ -516,15 +538,18 @@ file_creator = HDF5Creator(fingerprint_generator_factory=molgen)
     sep=&quot;\t&quot;,
 )
 </code></pre>
-<p>A full working example can be found in the under <a href="https://github.com/kochgroup/ChI-SOM/tree/main/examples">Examples</a></p>
+<p>A full working example can be found in the <a href="https://github.com/kochgroup/ChI-SOM/tree/main/examples">Examples</a></p>
 <h2 id="training-an-esom-on-data-in-a-hdf5dataset-using-cuda">Training an ESOM on data in a HDF5Dataset using CUDA</h2>
-<p>An introductory example on how to use ChI-SOM can be found on the <a href="../">Landing Page</a>.<br />
-There are, however, some considerations necessary for using the <a href="https://docs.pytorch.org/docs/stable/data.html">PyTorch DataLoader</a>.</p>
-<p>First we load the HDF5 file using the <em>HDF5Dataset</em> class  </p>
+<p>To use the generated <code>HDF5Dataset</code> <a href="https://docs.pytorch.org/docs/stable/data.html">PyTorch DataLoader</a> needs to be set up accoringly.</p>
+<p>First we load the HDF5 file using the <em>HDF5Dataset</em> class. In this case we only make the <code>"active"</code> subset defined previously available for training. If omitted, the whole dataset is used for training.</p>
+<pre><code class="language-python">from chisom.io import HDF5Dataset
+</code></pre>
 <pre><code class="language-python"># Create a ChemDataset object that from a HDF5 file, that is compatible with the pytorch DataLoader
 ds = HDF5Dataset(&quot;tests/VDR.h5&quot;, [&quot;active&quot;])
 </code></pre>
 <p>We create the <em>DataLoader</em> with the dataset instance as the input.</p>
+<pre><code class="language-python">from torch.utils.data import DataLoader
+</code></pre>
 <pre><code class="language-python"># Create a DataLoader object that will be used to train the SOM
 dl = DataLoader(
     ds,
@@ -534,6 +559,8 @@ dl = DataLoader(
 )
 </code></pre>
 <p>During initialization of the SOM, we can get the necessary data features from the <em>HDF5Dataset</em>, e.g. <em>fingerprint_length</em>. We set the <em>use_cuda</em> variable to use the CUDA compute backend.  </p>
+<pre><code class="language-python">from chisom import Som, start_chisom_viewer
+</code></pre>
 <pre><code class="language-python"># Create a SOM object
 # The high and low parameters should be chosen according to the dataset values, to decrease the training time
 som = Som(
@@ -562,7 +589,16 @@ dl = DataLoader(
 # Predict the best matching units and quantization errors for all data points
 bmus, qe = som.predict(dl)
 </code></pre>
-<p>A full working example can be found in the under <a href="https://github.com/kochgroup/ChI-SOM/tree/main/examples">Examples</a></p>
+<p>A full working example can be found in the <a href="https://github.com/kochgroup/ChI-SOM/tree/main/examples">Examples</a></p>
+<h2 id="using-less-cores-than-available">Using less cores than available</h2>
+<p>When &#7521;-SOM should use less core than are currently available on the machine, the desired number of cores to use (<code>n_cores</code>) can be set via <code>numba</code>, either programmatically</p>
+<pre><code class="language-python">from numba import set_num_threads
+
+set_num_treads(n_cores)
+</code></pre>
+<p>or via an environment variable</p>
+<pre><code class="language-bash">export NUMBA_NUM_THREADS=n_cores
+</code></pre>
 
 
 
