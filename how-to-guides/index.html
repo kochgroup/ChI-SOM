@@ -10,18 +10,20 @@
         <meta name="author" content="Johannes Kaminski, Oliver Koch">
       
       
+        <link rel="canonical" href="https://kochgroup.github.io/ChI-SOM/how-to-guides/">
       
-        <link rel="prev" href="..">
+      
+        <link rel="prev" href="../gui/">
       
       
-        <link rel="next" href="../reference/">
+        <link rel="next" href="../upgrading/">
       
       
         
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -59,7 +64,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -110,6 +122,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -231,7 +269,61 @@
   <span class="md-ellipsis">
     
   
-    Main
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Viewer
   
 
     
@@ -333,6 +425,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#measuring-distances-on-a-trained-som" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measuring distances on a trained SOM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendering-a-figure-without-a-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rendering a figure without a display
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-less-cores-than-available" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -347,6 +461,60 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrading to 1.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limitations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -454,6 +622,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#measuring-distances-on-a-trained-som" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measuring distances on a trained SOM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendering-a-figure-without-a-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rendering a figure without a display
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-less-cores-than-available" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -484,121 +674,213 @@
   
 
 
-<h1 id="how-to-guides">How-To Guides</h1>
+<h1 id="how-to-guides">How-To Guides<a class="headerlink" href="#how-to-guides" title="Permanent link">&para;</a></h1>
 <p>As large datasets of enumerated fingerprints and other information for cheminformatics might not fit into working memory, &#7521;-SOM supplies a dedicated HDF5 file layout and <em>HDF5Dataset</em> class. This <em>HDF5Dataset</em> class is compatible with the <a href="https://docs.pytorch.org/docs/stable/data.html">PyTorch DataLoader</a> for random, millisecond latency, access into this on-disk storage.</p>
-<h2 id="creating-a-hdf5dataset-file">Creating a HDF5Dataset file</h2>
+<h2 id="creating-a-hdf5dataset-file">Creating a HDF5Dataset file<a class="headerlink" href="#creating-a-hdf5dataset-file" title="Permanent link">&para;</a></h2>
 <p>&#7521;-SOM supplies a tool to generate the HDF5 files containing the fingerprints directly from text files of molecular data in different line notations, e.g. SMILES, INCHI, etc., or text files already containing enumerated fingerprint data. Other properties of the molecules can also be recorded for examination with the GUI.  </p>
-<p>We import <em>HDF5Creator</em> and either <em>rdStyleFactory</em> or <em>CSVStyleFactory</em>. Both need an <em>rdMolGenerator</em> to build the internal representation from line notation. <em>rdFingerprintGenerator</em> is specific to the direct generation of enumerated fingerprints.  </p>
-<pre><code class="language-python">from numpy import float32
-from rdkit.Chem import MolFromSmiles, rdFingerprintGenerator
+<p>We import <em>HDF5Creator</em> and either <em>rdStyleFactory</em> or <em>CSVStyleFactory</em>. Both need an <em>rdMolGenerator</em> to build the internal representation from line notation. <em>rdFingerprintGenerator</em> is specific to the direct generation of enumerated fingerprints.<br />
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">float32</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rdkit.Chem</span><span class="w"> </span><span class="kn">import</span> <span class="n">MolFromSmiles</span><span class="p">,</span> <span class="n">rdFingerprintGenerator</span>
 
-from chisom.io.datastore_creation import HDF5Creator
-from chisom.io.datastore_factories import rdStyleFactory
+<span class="kn">from</span><span class="w"> </span><span class="nn">chisom.io.datastore_creation</span><span class="w"> </span><span class="kn">import</span> <span class="n">HDF5Creator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">chisom.io.datastore_factories</span><span class="w"> </span><span class="kn">import</span> <span class="n">rdStyleFactory</span>
 
-generator = rdFingerprintGenerator.GetMorganGenerator
-</code></pre>
-<p>Next, we need to supply arguments to the fingerprint generator as a dictionary</p>
-<pre><code class="language-python">fingerprint_kwargs = {&quot;fpSize&quot;: 1024, &quot;radius&quot;: 2}
-</code></pre>
-<p>The paths and files considered for the HDF5 file creation must be supplied as a dictionary. Keys are distinct groups that can later be accessed individually when using the <em>Dataset</em>. Each item contains a list of files and paths that should be included in the respective group. Paths are walked recursively, and all files are included that match the file extensions later supplied to the <em>HDF5Creator</em>.  </p>
-<pre><code class="language-python">file_dict = {
-    &quot;active&quot;: [
-        &quot;tests/VDR/actives.smi&quot;,
-    ],
-    &quot;inactive&quot;: [
-        &quot;tests/VDR/inactives.smi&quot;,
-    ],
-}
-</code></pre>
-<p>Next, we initialize the factory that will be used to supply individual generators to the <em>HDF5Creator</em> tool, with the generators and variables we defined previously, and pass it to the <em>HDF5Creator</em>.</p>
-<pre><code class="language-python">molgen = rdStyleFactory(
-    MolFromSmiles,
-    generator,
-    generator_kwargs=fingerprint_kwargs,
-    count_fingerprint=True,
-)
-file_creator = HDF5Creator(fingerprint_generator_factory=molgen)
-</code></pre>
-<p>The file creation routine further needs a <em>leaf_map</em>, indicating the columns of the data to consider, their data type, and value type. The only required key is the 'primary' key, indicating in what column the molecules line notation is stored. The data type can be any Numpy or standard Python type. The value type is later used for the GUI to infer colour-coding behavior. Possible values are 'continouos', 'categorical' or 'na', indicating that the value should only be displayed by the table view, but not used for colour-coding the BMUs.  </p>
-<pre><code class="language-python">leaf_map = {
-    &quot;primary&quot;: (0, str),
-    &quot;ID&quot;: (1, str, &quot;na&quot;),
-    &quot;Activity&quot;: (2, int, &quot;categorical&quot;),
-    &quot;MolWt&quot;: (3, float32, &quot;continous&quot;),
-    &quot;MolLogP&quot;: (4, float32, &quot;continous&quot;),
-    &quot;TPSA&quot;: (5, float32, &quot;continous&quot;),
-}
-</code></pre>
-<p>To finally create the file, we call the <em>HDF5Creator.create()</em> method, with the desired output filepath. We can further skip lines, e.g. in case of a header, and change the separation character.</p>
-<pre><code class="language-python">file_creator.create(
-    file_dict,
-    &quot;tests/VDR.h5&quot;,
-    leaf_map,
-    skip_lines=1,
-    sep=&quot;\t&quot;,
-)
-</code></pre>
-<p>A full working example can be found in the <a href="https://github.com/kochgroup/ChI-SOM/tree/main/examples">Examples</a></p>
-<h2 id="training-an-esom-on-data-in-a-hdf5dataset-using-cuda">Training an ESOM on data in a HDF5Dataset using CUDA</h2>
+<span class="n">generator</span> <span class="o">=</span> <span class="n">rdFingerprintGenerator</span><span class="o">.</span><span class="n">GetMorganGenerator</span>
+</code></pre></div>
+Next, we need to supply arguments to the fingerprint generator as a dictionary
+<div class="highlight"><pre><span></span><code><span class="n">fingerprint_kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"fpSize"</span><span class="p">:</span> <span class="mi">1024</span><span class="p">,</span> <span class="s2">"radius"</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+</code></pre></div>
+The paths and files considered for the HDF5 file creation must be supplied as a dictionary. Keys are distinct groups that can later be accessed individually when using the <em>Dataset</em>. Each item contains a list of files and paths that should be included in the respective group. Paths are walked recursively, and all files are included that match the file extensions later supplied to the <em>HDF5Creator</em>.<br />
+<div class="highlight"><pre><span></span><code><span class="n">file_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"active"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"tests/VDR/actives.smi"</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">"inactive"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"tests/VDR/inactives.smi"</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+Next, we initialize the factory that will be used to supply individual generators to the <em>HDF5Creator</em> tool, with the generators and variables we defined previously, and pass it to the <em>HDF5Creator</em>.
+<div class="highlight"><pre><span></span><code><span class="n">molgen</span> <span class="o">=</span> <span class="n">rdStyleFactory</span><span class="p">(</span>
+    <span class="n">MolFromSmiles</span><span class="p">,</span>
+    <span class="n">generator</span><span class="p">,</span>
+    <span class="n">generator_kwargs</span><span class="o">=</span><span class="n">fingerprint_kwargs</span><span class="p">,</span>
+    <span class="n">count_fingerprint</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">file_creator</span> <span class="o">=</span> <span class="n">HDF5Creator</span><span class="p">(</span><span class="n">fingerprint_generator_factory</span><span class="o">=</span><span class="n">molgen</span><span class="p">)</span>
+</code></pre></div>
+The file creation routine further needs a <em>leaf_map</em>, indicating the columns of the data to consider, their data type, and value type. The only required key is the 'primary' key, indicating in what column the molecules line notation is stored. The data type can be any Numpy or standard Python type. The value type is later used for the GUI to infer colour-coding behavior. Possible values are 'continuous', 'categorical' or 'na', indicating that the value should only be displayed by the table view, but not used for colour-coding the BMUs.<br />
+<div class="highlight"><pre><span></span><code><span class="n">leaf_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"primary"</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span>
+    <span class="s2">"ID"</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="s2">"na"</span><span class="p">),</span>
+    <span class="s2">"Activity"</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">"categorical"</span><span class="p">),</span>
+    <span class="s2">"MolWt"</span><span class="p">:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">float32</span><span class="p">,</span> <span class="s2">"continuous"</span><span class="p">),</span>
+    <span class="s2">"MolLogP"</span><span class="p">:</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">float32</span><span class="p">,</span> <span class="s2">"continuous"</span><span class="p">),</span>
+    <span class="s2">"TPSA"</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">float32</span><span class="p">,</span> <span class="s2">"continuous"</span><span class="p">),</span>
+<span class="p">}</span>
+</code></pre></div>
+To finally create the file, we call the <em>HDF5Creator.create()</em> method, with the desired output filepath. We can further skip lines, e.g. in case of a header, and change the separation character. Both are optional — <code>skip_lines</code> defaults to <code>0</code> and <code>sep</code> to a tab.
+<div class="highlight"><pre><span></span><code><span class="n">file_creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">file_dict</span><span class="p">,</span>
+    <span class="s2">"tests/VDR.h5"</span><span class="p">,</span>
+    <span class="n">leaf_map</span><span class="p">,</span>
+    <span class="n">skip_lines</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+A full working example can be found in the <a href="https://github.com/kochgroup/ChI-SOM/tree/main/examples">Examples</a></p>
+<h2 id="training-an-esom-on-data-in-a-hdf5dataset-using-cuda">Training an ESOM on data in a HDF5Dataset using CUDA<a class="headerlink" href="#training-an-esom-on-data-in-a-hdf5dataset-using-cuda" title="Permanent link">&para;</a></h2>
 <p>To use the generated <code>HDF5Dataset</code> <a href="https://docs.pytorch.org/docs/stable/data.html">PyTorch DataLoader</a> needs to be set up accoringly.</p>
-<p>First we load the HDF5 file using the <em>HDF5Dataset</em> class. In this case we only make the <code>"active"</code> subset defined previously available for training. If omitted, the whole dataset is used for training.</p>
-<pre><code class="language-python">from chisom.io import HDF5Dataset
-</code></pre>
-<pre><code class="language-python"># Create a ChemDataset object that from a HDF5 file, that is compatible with the pytorch DataLoader
-ds = HDF5Dataset(&quot;tests/VDR.h5&quot;, [&quot;active&quot;])
-</code></pre>
-<p>We create the <em>DataLoader</em> with the dataset instance as the input.</p>
-<pre><code class="language-python">from torch.utils.data import DataLoader
-</code></pre>
-<pre><code class="language-python"># Create a DataLoader object that will be used to train the SOM
-dl = DataLoader(
-    ds,
-    batch_size=1000,
-    shuffle=True,
-    num_workers=4,
-)
-</code></pre>
-<p>During initialization of the SOM, we can get the necessary data features from the <em>HDF5Dataset</em>, e.g. <em>fingerprint_length</em>. We set the <em>use_cuda</em> variable to use the CUDA compute backend.  </p>
-<pre><code class="language-python">from chisom import Som, start_chisom_viewer
-</code></pre>
-<pre><code class="language-python"># Create a SOM object
-# The high and low parameters should be chosen according to the dataset values, to decrease the training time
-som = Som(
-    rows,
-    columns,
-    ds.fingerprint_length,
-    &quot;cosine&quot;,
-    use_cuda=True,
-    low=ds.fingerprint_min,
-    high=ds.fingerprint_max,
-)
-</code></pre>
-<p>The DataLoader is then passed to the <em>train</em> method.</p>
-<pre><code class="language-python"># The training loop
-for epoch in range(EPOCHS):
-    som.train(dl, epoch, current_sigma, current_alpha)
-</code></pre>
-<p>Should shuffling be used during training, a new instance of the <em>DataLoader</em> must be created before prediction of BMUs and QE to keep the correct association between the datapoints indices and prediction.</p>
-<pre><code class="language-python"># Create a DataLoader object for prediction (no shuffling)
-dl = DataLoader(
-    ds,
-    batch_size=1000,
-    shuffle=False,
-    num_workers=10,
-)
-# Predict the best matching units and quantization errors for all data points
-bmus, qe = som.predict(dl)
-</code></pre>
-<p>A full working example can be found in the <a href="https://github.com/kochgroup/ChI-SOM/tree/main/examples">Examples</a></p>
-<h2 id="using-less-cores-than-available">Using less cores than available</h2>
-<p>When &#7521;-SOM should use less core than are currently available on the machine, the desired number of cores to use (<code>n_cores</code>) can be set via <code>numba</code>, either programmatically</p>
-<pre><code class="language-python">from numba import set_num_threads
+<div class="admonition note">
+<p class="admonition-title">PyTorch is not installed with &#7521;-SOM</p>
+<p><code>torch</code> is not a runtime dependency of &#7521;-SOM — only this DataLoader workflow needs it. Install it separately with <code>pip install torch</code>. Training from a plain NumPy array works without it.</p>
+</div>
+<p>The whole guide needs these imports:
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataLoader</span>
 
-set_num_treads(n_cores)
-</code></pre>
-<p>or via an environment variable</p>
-<pre><code class="language-bash">export NUMBA_NUM_THREADS=n_cores
-</code></pre>
+<span class="kn">from</span><span class="w"> </span><span class="nn">chisom</span><span class="w"> </span><span class="kn">import</span> <span class="n">Som</span><span class="p">,</span> <span class="n">start_chisom_viewer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">chisom.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">HDF5Dataset</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">chisom.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">lattice_size</span>
+</code></pre></div>
+First we load the HDF5 file using the <em>HDF5Dataset</em> class. In this case we only make the <code>"active"</code> subset defined previously available for training. If omitted, the whole dataset is used for training.
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a ChemDataset object that from a HDF5 file, that is compatible with the pytorch DataLoader</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">HDF5Dataset</span><span class="p">(</span><span class="s2">"tests/VDR.h5"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"active"</span><span class="p">])</span>
+</code></pre></div>
+We create the <em>DataLoader</em> with the dataset instance as the input.
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a DataLoader object that will be used to train the SOM</span>
+<span class="n">dl</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span>
+    <span class="n">ds</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="n">BATCHSIZE</span><span class="p">,</span>
+    <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">num_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+The lattice dimensions follow the ESOM heuristic and are derived from the number of datapoints.
+<div class="highlight"><pre><span></span><code><span class="n">rows</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">lattice_size</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ds</span><span class="p">))</span>
+</code></pre></div>
+During initialization of the SOM, we can get the necessary data features from the <em>HDF5Dataset</em>, e.g. <em>fingerprint_length</em>. We set the <em>use_cuda</em> variable to use the CUDA compute backend.<br />
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a SOM object</span>
+<span class="c1"># The high and low parameters should be chosen according to the dataset values, to decrease the training time</span>
+<span class="n">som</span> <span class="o">=</span> <span class="n">Som</span><span class="p">(</span>
+    <span class="n">rows</span><span class="p">,</span>
+    <span class="n">columns</span><span class="p">,</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">fingerprint_length</span><span class="p">,</span>
+    <span class="s2">"cosine"</span><span class="p">,</span>
+    <span class="n">use_cuda</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">low</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">fingerprint_min</span><span class="p">,</span>
+    <span class="n">high</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">fingerprint_max</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+The DataLoader is then passed to the <em>train</em> method.
+<div class="highlight"><pre><span></span><code><span class="c1"># Train the SOM for all epochs in a single call</span>
+<span class="n">som</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">dl</span><span class="p">,</span> <span class="n">EPOCHS</span><span class="p">,</span> <span class="n">ALPHA</span><span class="p">,</span> <span class="n">BATCHSIZE</span><span class="p">)</span>
+</code></pre></div>
+The U-Matrix is available from the <code>umatrix</code> property once training has finished. Saving it to disk lets you reopen the map later with <a href="../gui/#from-the-command-line"><code>chisom view</code></a>.
+<div class="highlight"><pre><span></span><code><span class="c1"># Calculate the U-map for the current state of the notebook</span>
+<span class="n">umx</span> <span class="o">=</span> <span class="n">som</span><span class="o">.</span><span class="n">umatrix</span>
+<span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">"tests/umx.npy"</span><span class="p">,</span> <span class="n">umx</span><span class="p">)</span>
+</code></pre></div>
+Should shuffling be used during training, a new instance of the <em>DataLoader</em> must be created before prediction of BMUs and QE to keep the correct association between the datapoints indices and prediction.
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a DataLoader object for prediction (no shuffling)</span>
+<span class="n">dl</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span>
+    <span class="n">ds</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">num_workers</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Predict the best matching units and quantization errors for all data points</span>
+<span class="n">bmus</span><span class="p">,</span> <span class="n">qe</span> <span class="o">=</span> <span class="n">som</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">dl</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">"tests/bmus.npy"</span><span class="p">,</span> <span class="n">bmus</span><span class="p">)</span>
+</code></pre></div>
+A full working example can be found in the <a href="https://github.com/kochgroup/ChI-SOM/tree/main/examples">Examples</a></p>
+<h2 id="measuring-distances-on-a-trained-som">Measuring distances on a trained SOM<a class="headerlink" href="#measuring-distances-on-a-trained-som" title="Permanent link">&para;</a></h2>
+<p>The U-Matrix shows where the map is stretched, but it does not by itself tell you how far apart two regions are <em>along</em> the map. &#7521;-SOM exposes the underlying <strong>U-Distance graph</strong> for that: an undirected, edge-weighted graph whose nodes are grid positions and whose edges connect toroidal grid neighbours, weighted by the high-dimensional distance between the corresponding codebook vectors.</p>
+<p>Build the graph once from the trained SOM and reuse it — it is cached on the <code>Som</code>, but binding it to a local name keeps repeated queries obvious and cheap.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">chisom</span><span class="w"> </span><span class="kn">import</span> <span class="n">u_distance</span>
+
+<span class="n">graph</span> <span class="o">=</span> <span class="n">som</span><span class="o">.</span><span class="n">u_graph</span>
+</code></pre></div>
+<p><code>u_distance</code> then computes shortest-path lengths through that graph. The <code>target</code> is always a single <code>(row, column)</code> position; the <code>source</code> argument accepts three forms.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Distance from every unit on the map to a reference position</span>
+<span class="n">all_distances</span> <span class="o">=</span> <span class="n">u_distance</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+
+<span class="c1"># 2. Distance from one position</span>
+<span class="n">single</span> <span class="o">=</span> <span class="n">u_distance</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+
+<span class="c1"># 3. Distance from a collection of positions, e.g. the BMUs of a set of hits</span>
+<span class="n">hits</span> <span class="o">=</span> <span class="n">bmus</span><span class="p">[</span><span class="n">labels</span> <span class="o">==</span> <span class="s2">"active"</span><span class="p">]</span>
+<span class="n">hit_distances</span> <span class="o">=</span> <span class="n">u_distance</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">hits</span><span class="p">,</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+</code></pre></div>
+<p>Each call returns a <code>dict</code> mapping the queried source node — as an <code>(int, int)</code> tuple — to its u-distance. Passing <code>None</code> yields one entry per node in the graph, which is the form to use when you want a full distance field to plot over the map.</p>
+<div class="admonition note">
+<p class="admonition-title">Results are keyed by position, so duplicates collapse</p>
+<p>Because the result is a dictionary keyed by grid position, passing a collection of BMUs returns one entry per <em>distinct</em> position. Several datapoints sharing a BMU yield a single entry, so the result can be shorter than the collection you passed in.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Build the graph once</p>
+<p>Every call to <code>u_distance</code> runs a shortest-path search over the graph you hand it. Constructing the graph is the expensive part, so build it once and pass the same object to all your queries rather than accessing <code>som.u_graph</code> inside a loop over BMU pairs.</p>
+</div>
+<h2 id="rendering-a-figure-without-a-display">Rendering a figure without a display<a class="headerlink" href="#rendering-a-figure-without-a-display" title="Permanent link">&para;</a></h2>
+<p>The interactive viewer needs a graphical display. On a headless machine — a compute node, a CI job, an SSH session without X forwarding — use <code>plot_som</code> instead, which renders the same style of map through matplotlib and can write straight to a file. It is also the way to generate figures in bulk or from a script; if you already have the viewer open, it can <a href="../gui/#exporting-the-map">export the map directly</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">chisom</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_som</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plot_som</span><span class="p">(</span>
+    <span class="n">som</span><span class="o">.</span><span class="n">umatrix</span><span class="p">,</span>
+    <span class="n">bmu_coordinates</span><span class="o">=</span><span class="n">bmus</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">ds</span><span class="p">,</span>
+    <span class="n">color_by</span><span class="o">=</span><span class="s2">"Activity"</span><span class="p">,</span>
+    <span class="n">save_as</span><span class="o">=</span><span class="s2">"som_plot.png"</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<p><code>data</code> accepts either a <code>HDF5Dataset</code> or a plain <code>pandas.DataFrame</code>, and <code>color_by</code> names one of its columns. Whether that column is treated as categorical or continuous is inferred, but you can force it with <code>categorical=True</code>/<code>False</code>. For a SOM trained with <code>save_progress</code>, <code>layer</code> selects which epoch's U-Matrix to draw (default <code>-1</code>, the last).</p>
+<p>The figure sizes itself from the lattice, so non-square and very large maps come out with sensible proportions instead of being squeezed into a default canvas. The relevant knobs:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cell_size_in</code></td>
+<td><code>0.2</code></td>
+<td>Inches per grid cell — the main size control</td>
+</tr>
+<tr>
+<td><code>chrome_scale</code></td>
+<td><code>1.0</code></td>
+<td>Scales legend, colorbar and label sizes together</td>
+</tr>
+<tr>
+<td><code>marker_cell_fraction</code></td>
+<td><code>0.7</code></td>
+<td>BMU marker diameter as a fraction of one grid cell</td>
+</tr>
+<tr>
+<td><code>legend_ncol</code></td>
+<td>auto</td>
+<td>Columns in the categorical legend; derived from the category count if omitted</td>
+</tr>
+<tr>
+<td><code>legend_label_maxlen</code></td>
+<td><code>24</code></td>
+<td>Long category labels are elided to this length</td>
+</tr>
+</tbody>
+</table>
+<p>Passing <code>figsize</code> or <code>marker_size</code> explicitly opts back out of the grid-derived sizing. Passing <code>ax</code> draws into an existing axes instead of creating a figure.</p>
+<h2 id="using-less-cores-than-available">Using less cores than available<a class="headerlink" href="#using-less-cores-than-available" title="Permanent link">&para;</a></h2>
+<p>When &#7521;-SOM should use less core than are currently available on the machine, the desired number of cores to use (<code>n_cores</code>) can be set via <code>numba</code>, either programmatically
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">numba</span><span class="w"> </span><span class="kn">import</span> <span class="n">set_num_threads</span>
+
+<span class="n">set_num_threads</span><span class="p">(</span><span class="n">n_cores</span><span class="p">)</span>
+</code></pre></div></p>
+<p>or via an environment variable
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">NUMBA_NUM_THREADS</span><span class="o">=</span>n_cores
+</code></pre></div></p>
 
 
 
@@ -618,6 +900,12 @@ set_num_treads(n_cores)
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -648,10 +936,10 @@ set_num_treads(n_cores)
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

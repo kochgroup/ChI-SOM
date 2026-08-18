@@ -10,11 +10,13 @@
         <meta name="author" content="Johannes Kaminski, Oliver Koch">
       
       
-        <link rel="canonical" href="https://kochgroup.github.io/ChI-SOM/acknowledgements/">
+        <link rel="canonical" href="https://kochgroup.github.io/ChI-SOM/upgrading/">
       
       
-        <link rel="prev" href="../reference/">
+        <link rel="prev" href="../how-to-guides/">
       
+      
+        <link rel="next" href="../limitations/">
       
       
         
@@ -25,7 +27,7 @@
     
     
       
-        <title>Acknowledgments - ChI-SOM Docs</title>
+        <title>Upgrading to 1.1 - ChI-SOM Docs</title>
       
     
     
@@ -77,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#upgrading-to-11" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Acknowledgments
+              Upgrading to 1.1
             
           </span>
         </div>
@@ -360,10 +367,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../upgrading/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrading to 1.1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -379,6 +413,126 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breaking changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Breaking changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-gui-dependencies-are-now-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The GUI dependencies are now optional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cuda-backend-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The CUDA backend changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-is-a-single-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Training is a single call
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deprecations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deprecations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_umatrix-the-umatrix-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_umatrix() → the umatrix property
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-in-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New in 1.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regenerate-hdf5-stores-written-by-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regenerate HDF5 stores written by 1.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -441,17 +595,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../acknowledgements/" class="md-nav__link">
         
   
   
@@ -467,7 +614,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -489,6 +635,116 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breaking changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Breaking changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-gui-dependencies-are-now-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The GUI dependencies are now optional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cuda-backend-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The CUDA backend changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-is-a-single-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Training is a single call
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deprecations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deprecations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_umatrix-the-umatrix-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_umatrix() → the umatrix property
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-in-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New in 1.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regenerate-hdf5-stores-written-by-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regenerate HDF5 stores written by 1.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -508,16 +764,61 @@
   
 
 
-  <h1>Acknowledgments</h1>
+<h1 id="upgrading-to-11">Upgrading to 1.1<a class="headerlink" href="#upgrading-to-11" title="Permanent link">&para;</a></h1>
+<p>Version 1.1 carries three changes that will break existing setups, plus a data-correctness fix worth acting on. Everything else is additive.</p>
+<h2 id="breaking-changes">Breaking changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
+<h3 id="the-gui-dependencies-are-now-optional">The GUI dependencies are now optional<a class="headerlink" href="#the-gui-dependencies-are-now-optional" title="Permanent link">&para;</a></h3>
+<p><code>pip install chi-som</code> no longer installs PySide6 and pyqtgraph. A plain install gives you the library only, and importing the viewer raises an <code>ImportError</code>.</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="s1">'chi-som[gui]'</span>
+</code></pre></div>
+<p>This keeps the library installable on headless compute nodes, where a Qt stack is dead weight. <code>import chisom</code> and <code>chisom.plot_som</code> work without the extra; <code>chisom.start_chisom_viewer</code> is resolved lazily and only then requires it.</p>
+<h3 id="the-cuda-backend-changed">The CUDA backend changed<a class="headerlink" href="#the-cuda-backend-changed" title="Permanent link">&para;</a></h3>
+<p>The <code>cu12</code> and <code>cu13</code> extras now install <strong><code>numba-cuda-mlir</code></strong> instead of <code>numba-cuda</code>.</p>
+<p>Upgrading in place can leave both backends present in the same environment. Recreate the environment rather than upgrading over the top:</p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>sync<span class="w"> </span>--extra<span class="w"> </span>cu12<span class="w"> </span>--extra<span class="w"> </span>gui
+</code></pre></div>
+<p><code>use_cuda=True</code> on <code>Som</code> is unchanged — no code changes are needed.</p>
+<h3 id="training-is-a-single-call">Training is a single call<a class="headerlink" href="#training-is-a-single-call" title="Permanent link">&para;</a></h3>
+<p>Manual epoch loops are replaced by one <code>train</code> call that runs the whole schedule internally, including per-step decay of <code>alpha</code> and <code>sigma</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Before (1.0)</span>
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">EPOCHS</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">batches</span><span class="p">:</span>
+        <span class="n">som</span><span class="o">.</span><span class="n">train_batch</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
+        <span class="c1"># ... decay sigma and alpha yourself</span>
 
-<p>Data used in the examples and tests is sourced from</p>
-<blockquote>
-<p>Viet-Khoa Tran-Nguyen and Didier Rognan
-LIT-PCBA:  An unbiased data set for machine learning and virtual screening
-J. Chem. Inf. Model, 2020, 60, 9, 4263–4273</p>
-</blockquote>
-<p>The CUDA argmin implementation is derived from GBJim's argmax_example.cu at
-<a href="https://gist.github.com/GBJim/7ea9c16e9bea5b4dc913246e2e2dbc84">https://gist.github.com/GBJim/7ea9c16e9bea5b4dc913246e2e2dbc84</a></p>
+<span class="c1"># Now (1.1)</span>
+<span class="n">som</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">EPOCHS</span><span class="p">,</span> <span class="n">ALPHA</span><span class="p">,</span> <span class="n">BATCHSIZE</span><span class="p">)</span>
+</code></pre></div>
+<p><code>train</code> accepts either a NumPy array or a PyTorch <code>DataLoader</code>. Decay schedules are configurable via <code>alpha_decay</code>, <code>sigma_decay</code>, <code>alpha_end</code> and <code>sigma_end</code>.</p>
+<p><code>train_batch</code> still exists for manual stepping, but it is no longer the expected way to train a map.</p>
+<div class="admonition warning">
+<p class="admonition-title"><code>sigma</code> and <code>alpha</code> bounds are validated</p>
+<p><code>train</code> raises <code>ValueError</code> if <code>sigma &lt;= sigma_end</code> or <code>alpha &lt;= alpha_end</code>. If you previously passed a small <code>sigma</code>, check it against the <code>sigma_end</code> default of <code>1</code>.</p>
+</div>
+<h2 id="deprecations">Deprecations<a class="headerlink" href="#deprecations" title="Permanent link">&para;</a></h2>
+<h3 id="get_umatrix-the-umatrix-property"><code>get_umatrix()</code> → the <code>umatrix</code> property<a class="headerlink" href="#get_umatrix-the-umatrix-property" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">umx</span> <span class="o">=</span> <span class="n">som</span><span class="o">.</span><span class="n">get_umatrix</span><span class="p">()</span>   <span class="c1"># deprecated</span>
+<span class="n">umx</span> <span class="o">=</span> <span class="n">som</span><span class="o">.</span><span class="n">umatrix</span>         <span class="c1"># use this</span>
+</code></pre></div>
+<p>The U-Matrix is now always <strong>3D</strong>, of shape <code>(n_layers, rows, columns)</code>. With <code>save_progress</code> set, one layer is stored per epoch, giving you the training history; otherwise there is a single layer. Code that indexed a 2D array needs <code>umx[-1]</code> to get the final layer.</p>
+<p><code>plot_som</code> and the viewer both accept the 3D form directly.</p>
+<h2 id="new-in-11">New in 1.1<a class="headerlink" href="#new-in-11" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>A command line interface.</strong> <code>chisom view</code> opens the viewer without writing a script. See <a href="../gui/#from-the-command-line">The Viewer</a>.</li>
+<li><strong>U-Distance queries.</strong> <code>Som.u_graph</code> exposes the map's weighted neighbour graph, and <code>chisom.u_distance</code> computes shortest-path distances over it. See <a href="../how-to-guides/#measuring-distances-on-a-trained-som">Measuring distances on a trained SOM</a>.</li>
+<li><strong>Filtering by data property in the viewer.</strong> Narrow the map and the table to a subset of your datapoints. See <a href="../gui/#filtering-by-data-property">Filtering by data property</a>.</li>
+<li><strong>Loading artefacts from the viewer.</strong> <code>start_chisom_viewer</code> now takes no required arguments; U-Matrix, BMUs and dataset can be loaded from the <em>File</em> menu.</li>
+<li><strong>More dataset formats.</strong> CSV, TSV and Parquet alongside the HDF5 store, via the new <code>chisom.io.loading</code> helpers.</li>
+<li><strong>Molecule popups.</strong> Hovering a BMU shows the structures and properties of the molecules mapped to it.</li>
+</ul>
+<h2 id="regenerate-hdf5-stores-written-by-10">Regenerate HDF5 stores written by 1.0<a class="headerlink" href="#regenerate-hdf5-stores-written-by-10" title="Permanent link">&para;</a></h2>
+<p>Two bugs in the 1.0 data store path affected the recorded value range of continuous columns:</p>
+<ul>
+<li>The upper bound was written from the wrong index during store creation, so continuous columns could carry a wrong maximum.</li>
+<li>Merging value ranges across multiple groups did not widen them correctly, so multi-group stores reported wrong ranges.</li>
+</ul>
+<p>Both are fixed. The stored fingerprints and properties were never wrong — only the cached per-column ranges — but those ranges drive the viewer's continuous colour scales and the default bounds of the new range filters.</p>
+<p>If colour scales on continuous properties ever looked wrong, or if you use multi-group stores, <strong>regenerate the store</strong> with <code>HDF5Creator</code> under 1.1. Otherwise no action is needed.</p>
 
 
 

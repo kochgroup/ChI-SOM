@@ -1,3 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://kochgroup.github.io/ChI-SOM/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
+         <loc>https://kochgroup.github.io/ChI-SOM/acknowledgements/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
+         <loc>https://kochgroup.github.io/ChI-SOM/gui/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
+         <loc>https://kochgroup.github.io/ChI-SOM/how-to-guides/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
+         <loc>https://kochgroup.github.io/ChI-SOM/installation/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
+         <loc>https://kochgroup.github.io/ChI-SOM/limitations/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
+         <loc>https://kochgroup.github.io/ChI-SOM/reference/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
+         <loc>https://kochgroup.github.io/ChI-SOM/upgrading/</loc>
+         <lastmod>2026-08-18</lastmod>
+    </url>
 </urlset>

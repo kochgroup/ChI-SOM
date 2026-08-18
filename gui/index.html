@@ -1,0 +1,1172 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Johannes Kaminski, Oliver Koch">
+      
+      
+        <link rel="canonical" href="https://kochgroup.github.io/ChI-SOM/gui/">
+      
+      
+        <link rel="prev" href="../installation/">
+      
+      
+        <link rel="next" href="../how-to-guides/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>The Viewer - ChI-SOM Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-viewer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ChI-SOM Docs" class="md-header__button md-logo" aria-label="ChI-SOM Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ChI-SOM Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Viewer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kochgroup/ChI-SOM" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kochgroup/ChI-SOM
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ChI-SOM Docs" class="md-nav__button md-logo" aria-label="ChI-SOM Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ChI-SOM Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kochgroup/ChI-SOM" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kochgroup/ChI-SOM
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Viewer
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Viewer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#launching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launching
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Launching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-the-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From the command line
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-dataset-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported dataset formats
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#window-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Window layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colouring-the-bmus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colouring the BMUs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-by-data-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtering by data property
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-datapoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selecting datapoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspecting-a-single-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspecting a single unit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-compound-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The compound table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exporting-the-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting the map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loading-data-while-the-viewer-is-open" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading data while the viewer is open
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-viewer-does-not-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the viewer does not do
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How-To Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrading to 1.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limitations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acknowledgements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acknowledgments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#launching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launching
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Launching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-the-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From the command line
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-dataset-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported dataset formats
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#window-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Window layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colouring-the-bmus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colouring the BMUs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-by-data-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtering by data property
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-datapoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selecting datapoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspecting-a-single-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspecting a single unit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-compound-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The compound table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exporting-the-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting the map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loading-data-while-the-viewer-is-open" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading data while the viewer is open
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-viewer-does-not-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the viewer does not do
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="the-viewer">The Viewer<a class="headerlink" href="#the-viewer" title="Permanent link">&para;</a></h1>
+<p>The &#7521;-SOM viewer is an interactive Qt application for exploring a trained SOM: it draws the U-Matrix, overlays the best matching units (BMUs) of your datapoints, and lets you colour, filter, select and inspect those datapoints against the molecules behind them.</p>
+<p><img alt="Overview of the ChI-SOM GUI" src="../images/gui_screenshot.png" title="The GUI" /></p>
+<p>The viewer does <strong>not</strong> train SOMs. Train first with the library (see the <a href="../how-to-guides/">How-To Guides</a>), save the U-Matrix and BMUs, then explore them here.</p>
+<div class="admonition note">
+<p class="admonition-title">Requires the <code>gui</code> extra and a display</p>
+<p>Install with <code>pip install 'chi-som[gui]'</code>. The viewer needs a graphical display; on headless machines use <a href="../how-to-guides/#rendering-a-figure-without-a-display"><code>plot_som</code></a> instead. See <a href="../limitations/">Limitations</a>.</p>
+</div>
+<h2 id="launching">Launching<a class="headerlink" href="#launching" title="Permanent link">&para;</a></h2>
+<h3 id="from-the-command-line">From the command line<a class="headerlink" href="#from-the-command-line" title="Permanent link">&para;</a></h3>
+<p>Once a U-Matrix and the BMUs have been saved to disk, the viewer opens directly — no script needed:</p>
+<div class="highlight"><pre><span></span><code>chisom<span class="w"> </span>view<span class="w"> </span>-u<span class="w"> </span>umx.npy<span class="w"> </span>-b<span class="w"> </span>bmus.npy<span class="w"> </span>-d<span class="w"> </span>dataset.h5<span class="w"> </span>--groups<span class="w"> </span>active<span class="w"> </span>--structure-column<span class="w"> </span>smiles
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-u</code>, <code>--umatrix PATH</code></td>
+<td>–</td>
+<td>U-Matrix of the SOM, as a <code>.npy</code> file (2D or 3D)</td>
+</tr>
+<tr>
+<td><code>-b</code>, <code>--bmus PATH</code></td>
+<td>–</td>
+<td>BMU coordinates of the datapoints, as a <code>.npy</code> file of shape <code>(n, 2)</code></td>
+</tr>
+<tr>
+<td><code>-d</code>, <code>--data PATH</code></td>
+<td>–</td>
+<td>Datapoint properties (see formats below)</td>
+</tr>
+<tr>
+<td><code>--structure-column NAME</code></td>
+<td>auto-detected</td>
+<td>Dataset column holding the SMILES used to render structures</td>
+</tr>
+<tr>
+<td><code>--groups GROUP [GROUP ...]</code></td>
+<td>all groups</td>
+<td>HDF5 only: which groups of the store to load. Requires <code>-d</code></td>
+</tr>
+<tr>
+<td><code>--scaling-factor N</code></td>
+<td><code>3</code></td>
+<td>Interpolate the U-Matrix by this factor for an anti-aliased view</td>
+</tr>
+</tbody>
+</table>
+<p><code>chisom --version</code> prints the installed version.</p>
+<p><strong>Every argument is optional.</strong> A bare</p>
+<div class="highlight"><pre><span></span><code>chisom<span class="w"> </span>view
+</code></pre></div>
+<p>opens an empty window; U-Matrix, BMUs and dataset can then be loaded from the <em>File</em> menu.</p>
+<p>Exit codes: <code>1</code> for a load error or a missing display, <code>2</code> if the GUI extra is not installed.</p>
+<h3 id="from-python">From Python<a class="headerlink" href="#from-python" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">chisom</span><span class="w"> </span><span class="kn">import</span> <span class="n">start_chisom_viewer</span>
+
+<span class="n">start_chisom_viewer</span><span class="p">(</span><span class="n">umatrix</span><span class="p">,</span> <span class="n">bmus</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">structure_info_column</span><span class="o">=</span><span class="s2">"smiles"</span><span class="p">)</span>
+</code></pre></div>
+<p>All arguments are optional here too, so <code>start_chisom_viewer()</code> opens the same empty window.</p>
+<h3 id="supported-dataset-formats">Supported dataset formats<a class="headerlink" href="#supported-dataset-formats" title="Permanent link">&para;</a></h3>
+<p>The <code>-d</code>/<code>--data</code> argument, the <em>File → Load data</em> dialog and <code>chisom.io.load_dataset</code> all accept:</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Suffixes</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HDF5 store</td>
+<td><code>.h5</code>, <code>.hdf5</code></td>
+<td>Created with <code>HDF5Creator</code>; carries per-column value types and group structure</td>
+</tr>
+<tr>
+<td>Delimited text</td>
+<td><code>.csv</code></td>
+<td>Comma-separated</td>
+</tr>
+<tr>
+<td>Delimited text</td>
+<td><code>.tsv</code>, <code>.txt</code></td>
+<td>Tab-separated</td>
+</tr>
+<tr>
+<td>Parquet</td>
+<td><code>.parquet</code>, <code>.pq</code></td>
+<td>Needs <code>pyarrow</code>, included in the <code>gui</code> extra</td>
+</tr>
+</tbody>
+</table>
+<p><code>--groups</code> applies to HDF5 stores only. HDF5 stores are the only format that records value types (<code>categorical</code>, <code>continuous</code>, <code>na</code>) explicitly; for the other formats the type of each column is inferred — see <a href="../limitations/">Limitations</a>.</p>
+<h2 id="window-layout">Window layout<a class="headerlink" href="#window-layout" title="Permanent link">&para;</a></h2>
+<p>The window is a vertical splitter, and the divider can be dragged to rebalance the two halves:</p>
+<ul>
+<li><strong>Top</strong> — the map view: the U-Matrix image, the BMU scatter, two colorbars, and the <em>Controls</em> panel on the right.</li>
+<li><strong>Bottom</strong> — the compound table, listing the datapoints you have selected on the map.</li>
+</ul>
+<p>The title bar reflects what is currently loaded, e.g. <code>ChI-SOM - U-matrix: umx.npy, BMUs: bmus.npy, data: VDR.h5</code>.</p>
+<h2 id="the-map">The map<a class="headerlink" href="#the-map" title="Permanent link">&para;</a></h2>
+<p>The U-Matrix is drawn as an image with an aspect-locked view: drag to pan, scroll to zoom.</p>
+<ul>
+<li><strong>U-height colorbar</strong> — to the right of the map, showing the U-Matrix scale.</li>
+<li><strong>Colormap</strong> — the <em>Controls</em> combo lists every matplotlib colormap plus two custom ones: <strong>Earth</strong> (the default, a 13-step discrete land/water palette) and <strong>Cyclic Green</strong>.</li>
+<li><strong>Interpolation</strong> — the map is interpolated by <code>--scaling-factor</code> (default <code>3</code>) for a smoother, anti-aliased image. This is a launch-time setting.</li>
+</ul>
+<p>If a SOM was trained with <code>save_progress</code>, its U-Matrix has one layer per epoch; the viewer always shows the <strong>last</strong> layer.</p>
+<h2 id="colouring-the-bmus">Colouring the BMUs<a class="headerlink" href="#colouring-the-bmus" title="Permanent link">&para;</a></h2>
+<p>Each occupied map unit gets one dot. The <em>Controls</em> panel governs how they look:</p>
+<ul>
+<li><strong>show</strong> — master visibility toggle for the BMU layer.</li>
+<li><strong>Size</strong> — marker size, 1–200.</li>
+<li><strong>Color by</strong> — the dataset column driving the colour. Columns typed <code>na</code> still appear in the table but are not offered here, and the fingerprint column is always excluded.</li>
+</ul>
+<p>What appears below <em>Color by</em> depends on the column's type:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Categorical columns</label><label for="__tabbed_1_2">Continuous columns</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>One row per category, each with a colour button. Pick your colours, then press <strong>Set Colors</strong> to apply them all at once. Choices are remembered per column, so switching columns back and forth does not lose them.</p>
+<p>Where several categories share a map unit, the <strong>dominant category sets the hue and the marker's alpha encodes how dominant it is</strong> — a solid dot is a pure unit, a faint one is a mixed unit. This makes boundary regions between classes visible at a glance.</p>
+</div>
+<div class="tabbed-block">
+<p>A second colormap combo appears; choosing a colormap immediately recolours the BMUs and reveals a second colorbar labelled with the property name.</p>
+<p>Each unit is coloured by the <strong>mean</strong> of the property over the datapoints mapped to it. The scale is normalised over occupied units only, so empty regions of the map do not flatten the colour range.</p>
+</div>
+</div>
+</div>
+<h2 id="filtering-by-data-property">Filtering by data property<a class="headerlink" href="#filtering-by-data-property" title="Permanent link">&para;</a></h2>
+<p>Below the colouring controls, <em>Filter by</em> narrows the view to a subset of your datapoints. Pick a column, set a condition, and press <strong>Apply Filter</strong>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Categorical columns</label><label for="__tabbed_2_2">Continuous columns</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A checkbox per category, all ticked initially. Untick the ones you want hidden.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Min</strong> and <strong>Max</strong> spin boxes, pre-populated with the column's actual value range.</p>
+</div>
+</div>
+</div>
+<p><strong>Clear Filter</strong> restores everything — all categories re-ticked, spin boxes reset to the full range.</p>
+<p>A filter is a single per-datapoint mask, and it propagates to three places at once:</p>
+<ol>
+<li><strong>The map</strong> — a BMU dot disappears unless at least one of its datapoints passes the filter.</li>
+<li><strong>Selection</strong> — an ROI selection skips filtered-out molecules, even when they sit on a map unit shared with molecules that do pass.</li>
+<li><strong>Colour</strong> — BMU colours are recomputed over the surviving datapoints only, so category ratios and continuous means reflect the filtered subset rather than the whole dataset.</li>
+</ol>
+<h2 id="selecting-datapoints">Selecting datapoints<a class="headerlink" href="#selecting-datapoints" title="Permanent link">&para;</a></h2>
+<p>Selection uses a polygon region of interest:</p>
+<ul>
+<li><strong>Ctrl+click</strong> on the map adds a vertex to the polygon. Each added point closes the shape and immediately updates the table below.</li>
+<li><strong>Click</strong> without a modifier clears the ROI.</li>
+</ul>
+<p>Every datapoint whose BMU falls inside the polygon is listed in the compound table, minus anything the active filter excludes.</p>
+<h2 id="inspecting-a-single-unit">Inspecting a single unit<a class="headerlink" href="#inspecting-a-single-unit" title="Permanent link">&para;</a></h2>
+<p>Hover the cursor over a BMU dot and hold it there for about a second: a popup lists every molecule mapped to that unit, one card each, with a rendered structure and all of that molecule's property values.</p>
+<p>The popup is scrollable, so densely populated units are fully browsable. Moving off the dot gives you a short grace period to move the cursor onto the popup itself; leaving the popup closes it. When zoomed far out, several overlapping dots may be hovered at once and all of their molecules are shown.</p>
+<p>Structures are only drawn if a structure column has been set — otherwise cards read <em>No structure</em>.</p>
+<h2 id="the-compound-table">The compound table<a class="headerlink" href="#the-compound-table" title="Permanent link">&para;</a></h2>
+<p>The lower panel lists the current selection.</p>
+<ul>
+<li>A <strong>Structure</strong> column is appended when a structure column is configured, rendering each molecule from its SMILES.</li>
+<li><strong>Right-click</strong> for a context menu: <em>Copy Selection</em>, <em>Copy All</em>, <em>Save Selection</em>, <em>Save All</em>.</li>
+<li><strong>Ctrl+C</strong> copies the current selection.</li>
+<li>Exports are <strong>tab-separated</strong> (<code>.tsv</code>). The rendered structure images are omitted from exported data.</li>
+</ul>
+<h2 id="exporting-the-map">Exporting the map<a class="headerlink" href="#exporting-the-map" title="Permanent link">&para;</a></h2>
+<p><strong>Right-click anywhere on the map</strong> for its context menu. Alongside the view controls — <em>View All</em>, <em>X axis</em>, <em>Y axis</em>, <em>Mouse Mode</em> — it carries an <strong>Export...</strong> entry, which opens the export dialog.</p>
+<p>The dialog has two parts: a tree on the left to choose <em>what</em> to export, and a format list on the right. Selecting the top-level entry exports the whole map view; selecting a single item exports just that item.</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Image File (PNG, TIF, JPG, ...)</strong></td>
+<td>Raster output at a chosen width and height — slides, reports, quick sharing</td>
+</tr>
+<tr>
+<td><strong>Scalable Vector Graphics (SVG)</strong></td>
+<td>Vector output that stays sharp at any size — publication figures, further editing</td>
+</tr>
+<tr>
+<td><strong>Matplotlib Window</strong></td>
+<td>Reopens the current data in a matplotlib figure, for tweaking beyond what the viewer offers</td>
+</tr>
+<tr>
+<td><strong>CSV of original plot data</strong></td>
+<td>The underlying numbers rather than a picture</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Export</strong> writes to a file; <strong>Copy</strong> puts the result straight on the clipboard.</p>
+<p>Exports reflect exactly what is on screen — the current colormap, BMU colouring, marker size, zoom level and any active filter. Set the view up the way you want it first, then export.</p>
+<div class="admonition tip">
+<p class="admonition-title">Scripted or headless figures</p>
+<p>This is the interactive path. For figures generated from a script, on a machine with no display, or in bulk, use <a href="../how-to-guides/#rendering-a-figure-without-a-display"><code>plot_som</code></a> instead.</p>
+</div>
+<h2 id="loading-data-while-the-viewer-is-open">Loading data while the viewer is open<a class="headerlink" href="#loading-data-while-the-viewer-is-open" title="Permanent link">&para;</a></h2>
+<p>The <em>File</em> menu has three entries — <strong>Load U-matrix</strong>, <strong>Load BMUs</strong> and <strong>Load data</strong> — so artefacts can be swapped without restarting. U-Matrix and BMU dialogs expect <code>.npy</code> files.</p>
+<p>Choosing a data file opens an options dialog:</p>
+<ul>
+<li><strong>Structure column</strong> — guessed automatically (a column named exactly <code>smiles</code>, else the first name containing <code>smiles</code>), and overridable from a dropdown.</li>
+<li><strong>Groups</strong> — for HDF5 stores, a checklist of the groups to load. At least one must be ticked.</li>
+</ul>
+<p>Before anything is swapped in, the viewer validates the artefacts against each other and warns if they disagree — for instance when the BMU array describes a different number of datapoints than the dataset holds, or when a BMU coordinate falls outside the U-Matrix lattice. Your existing view is left untouched when validation fails.</p>
+<p>Colormap, BMU marker size and the splitter proportions are preserved across reloads.</p>
+<h2 id="what-the-viewer-does-not-do">What the viewer does not do<a class="headerlink" href="#what-the-viewer-does-not-do" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Train SOMs</strong> — training is library-only.</li>
+<li><strong>Save or restore sessions</strong> — colour choices and filters live only as long as the window.</li>
+</ul>
+<p>See <a href="../limitations/">Limitations</a> for the full list, including performance characteristics.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
